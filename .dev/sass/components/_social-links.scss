@@ -1,0 +1,102 @@
+/*! Social Links / Menu */
+
+.war-social-links {
+	a {
+        @extend .war-icon-button;
+        @extend .war-icon-button--alt;
+
+		&::before {
+			font-family: 'Font Awesome 5 Brands';
+            font-size: inherit;
+            line-height: 1;
+			color: inherit;
+			-webkit-backface-visibility: visible;
+			backface-visibility: visible;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+    }
+    
+    .menu {
+        margin: 0;
+		padding: 0;
+		list-style: none;
+    }
+}
+
+.war-social-links a[href*="twitter.com"]::before {
+	content: '\f099';
+}
+
+.war-social-links a[href*="facebook.com"]::before {
+	content: '\f39e';
+}
+
+.war-social-links a[href*="google.com"]::before {
+	content: '\f0d5';
+}
+
+.war-social-links a[href*="dribbble.com"]::before {
+	content: '\f17d';
+}
+
+.war-social-links a[href*="pinterest.com"]::before {
+	content: '\f231';
+}
+
+.war-social-links a[href*="youtube.com"]::before {
+	content: '\f167';
+}
+
+.war-social-links a[href*="flickr.com"]::before {
+	content: '\f16e';
+}
+
+.war-social-links a[href*="vimeo.com"]::before {
+	content: '\f194';
+}
+
+.war-social-links a[href*="instagram.com"]::before {
+	content: '\f16d';
+}
+
+.war-social-links a[href*="linkedin.com"]::before {
+	content: '\f0e1';
+}
+
+.war-social-links a[href*="foursquare.com"]::before {
+	content: '\f180';
+}
+
+.war-social-links a[href*="tumblr.com"]::before {
+	content: '\f173';
+}
+
+.war-social-links a[href*="behance.net"]::before {
+	content: '\f1b4';
+}
+
+.war-social-links a[href*="deviantart.com"]::before {
+	content: '\f1bd';
+}
+
+.war-social-links a[href*="soundcloud.com"]::before {
+	content: '\f1be';
+}
+
+.war-social-links a[href*="spotify.com"]::before {
+	content: '\f1bc';
+}
+
+.war-social-links a[href*="weibo.com"]::before {
+	content: '\f18a';
+}
+
+.war-social-links a[href*="xing.com"]::before {
+	content: '\f168';
+}
+
+.war-social-links a[href*="trello.com"]::before {
+	content: '\f181';
+}

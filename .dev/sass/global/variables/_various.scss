@@ -1,0 +1,16 @@
+// Various
+
+// Transitions
+$v__transition-time: 0.2s;
+$v__transition-time--slow: 0.5s;
+$v__transition-time--superslow: 1s;
+$v__transition-easing: ease-out;
+$v__transition-cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+
+// Shadow
+$v__box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+
+//nav menu items for transition loop
+
+$menuItems: 10;

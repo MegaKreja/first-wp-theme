@@ -1,0 +1,40 @@
+html{
+    position: relative;
+    background-color: $c__dark-blue;
+    &:after{
+        content: "";
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        display: block;
+        top: 200px;
+        left: 50%;
+        z-index: 1;
+        background-image: url('assets/images/sign-white.svg');
+        background-repeat: no-repeat;
+        background-size: 80px auto;
+        background-position: center center;
+        pointer-events: none;
+        transform: translate( -50%, 0px );
+        opacity: 0;
+        transition: all 0.6s;
+    }
+    body{
+        transition: all 0.2s ease-out;
+        transform: none;
+        opacity: 1;
+    }
+    &.war-loading{
+        body{
+            opacity: 0;
+            transform: translate( 0, 10px );
+        }
+        &:after{
+            transform: translate( -50%, 0 );
+            opacity: 0.1;
+            @include media-breakpoint-down(sm) {
+                background-image: none;
+            }
+        }
+    }
+}

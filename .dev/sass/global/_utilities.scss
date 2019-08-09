@@ -1,0 +1,94 @@
+/*! Utilities */
+
+// Color utilities
+// backgrounds by role
+.war-bg--primary {
+    background-color: $c__primary;
+}
+
+.war-bg--secondary {
+    background-color: $c__secondary;
+}
+
+.war-bg--info {
+    background-color: $c__info;
+}
+
+// text color by role
+.war-text--primary {
+    color: $c__primary;
+}
+
+.war-text--secondary {
+    color: $c__secondary;
+}
+
+.war-text--info {
+    color: $c__info;
+}
+
+// bg color by color name
+.war-bg--pink {
+    background-color: $c__pink;
+}
+
+.war-bg--dark-blue {
+    background-color: $c__dark-blue;
+}
+
+.war-bg--grey {
+    background-color: $c__grey;
+}
+
+.war-bg--white {
+    background-color: $c__white;
+}
+
+// text color by color name
+.war-text--pink {
+    color: $c__pink;
+}
+
+.war-text--dark-blue {
+    color: $c__dark-blue;
+}
+
+.war-text--grey {
+    color: $c__grey;
+}
+
+.war-text--white {
+    color: $c__white;
+}
+
+// End of Color utilities
+
+// Text utilities
+
+.war-text-underlined {
+    text-decoration: underline;
+}
+
+// End of Text utilities
+
+.war-100vh-center {
+    @include full-viewport-height-section;
+}
+
+
+.war-lock-scroll {
+    overflow: hidden !important;
+}
+
+.war-pointer-none, .with-featherlight {
+    pointer-events: none!important;
+    .menu-main-menu-container{
+        li, a{
+            pointer-events: none!important;
+        }
+    }
+}
+
+.war-manager-lightbox{
+    pointer-events: all!important;
+}

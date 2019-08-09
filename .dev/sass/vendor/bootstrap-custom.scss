@@ -1,0 +1,70 @@
+/*! Bootstrap custom */
+
+// Bootstrap variables overides
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Larger screen / not yet wide desktop - targeting ipad landscape
+  lg-ipad: 1024px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+  // xxl
+  xxl: 1440px,
+  // xxxl
+  xxxl: 1694px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  lg-ipad: 1024px,
+  xl: 1140px,
+  xxl: 1380px,
+  xxxl: 1634px
+);
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// @import "code";
+// @import "grid";
+// @import "tables";
+// @import "forms";
+// @import "buttons";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "input-group";
+// @import "custom-forms";
+// @import "nav";
+// @import "navbar";
+// @import "card";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+// @import "list-group";
+// @import "close";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "print";
+// @import "images";
+// @import "type";
+// @import "reboot";
+// @import "functions";
+// @import "root";

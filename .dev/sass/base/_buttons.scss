@@ -1,0 +1,175 @@
+/*! Buttons  */
+
+button:not(.action-card),
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.war-button {
+    display: inline-block;
+    padding: 16px 20px 15px;
+    cursor: pointer;
+
+    // fonts
+    font-family: $t__font-main;
+	@include font-size(1.125); // 18px
+    line-height: 1.167; // 21px
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: letter-spacing(94);
+    text-align: center;
+    
+    // colors
+    color: $c__button-text;
+    background-color: $c__button-bg;
+    border: none;
+    transition: color $v__transition-time $v__transition-easing, 
+                background-color $v__transition-time $v__transition-easing;
+
+    padding: 10px 16px;
+    @include font-size(0.9375); // 15px
+    line-height: 1.133; // 17px
+    letter-spacing: letter-spacing(64);
+
+    // hover, focus
+    &:hover,
+    &:focus,
+    &.war-button--hover,
+    &.war-button--focus {
+        color: $c__button-text--hover;
+        background-color: $c__button-bg--hover;
+    }
+
+    // disabled
+    &[disabled],
+    &.war-button--disabled {
+        color: $c__button-text--disabled;
+        background-color: $c__button-bg--disabled;
+        cursor: not-allowed;
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 14px 18px 13px;
+        @include font-size(1); // 16px
+        line-height: 1.125; // 18px
+        letter-spacing: letter-spacing(64);
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: 16px 20px 15px;
+        @include font-size(1.125); // 18px
+        line-height: 1.167; // 21px
+        letter-spacing: letter-spacing(94);
+	}
+}
+
+
+// Icon buttons 
+
+.war-icon-button--plain {
+    display: inline-block;
+    border-radius: 100%;
+    text-align: center;
+
+    width: 2.5rem; // 40px
+    height: 2.5rem; // 40px
+    @include font-size(1.125); // 18px
+    line-height: 2.5rem; // 40px
+    transition: color $v__transition-time $v__transition-easing;
+
+    @include media-breakpoint-up(md) {
+        width: 3.75rem; // 60px
+        height: 3.75rem; // 60px
+        @include font-size(1.6875); // 27px
+        line-height: 3.75rem; // 60px
+    }
+}
+
+.war-icon-button {
+    @extend .war-icon-button--plain;
+    transition: color $v__transition-time $v__transition-easing, 
+                background-color $v__transition-time $v__transition-easing;
+                
+    color: $c__icon-button-text;
+    background-color: $c__icon-button-bg;
+
+    &:hover,
+    &:focus {
+        color: $c__icon-button-text;
+        background-color: $c__icon-button-bg--hover;
+    }
+}
+
+.war-icon-button--alt {
+    color: $c__alt-icon-button-text;
+    background-color: $c__alt-icon-button-bg;
+
+    &:hover,
+    &:focus {
+        color: $c__alt-icon-button-text;
+        background-color: $c__alt-icon-button-bg--hover;
+    }
+}
+
+.slick-dots li {
+    button {
+        background-color: transparent !important;
+        font-size: 0 !important;
+    
+        &:hover,
+        &:focus {
+            background-color: transparent !important;
+    
+            &::before {
+                background-color: $c__primary !important;
+                color: $c__primary !important;
+                opacity: 1 !important;
+            }
+        }
+    
+        &::before {
+            border-radius: 100%;
+            opacity: 0.75 !important;
+            background-color: $c__grey;
+            color: $c__grey;
+        }
+    }
+
+    &.slick-active {
+        button {
+            &::before {
+                background-color: $c__primary !important;
+                color: $c__primary !important;
+                opacity: 1 !important;
+            }
+        }
+    }
+}
+
+.popup-close,
+.team-showcase-close {
+    .fas.fa-times-circle {
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 1.875rem;
+            height: 1.875rem;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+
+            @include media-breakpoint-down(md) {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+    }
+}
+
+.slick-arrow.slick-hidden {
+    display: none !important;
+}

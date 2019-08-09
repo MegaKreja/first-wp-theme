@@ -1,0 +1,175 @@
+/*! Contact  */
+
+.contact-page-main-wrapper{
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 340px;
+    padding-bottom: 100px;
+    @include media-breakpoint-down(md) {
+        padding-top: 220px;
+    }
+    &>.container{
+        position: relative;
+        z-index: 3;
+    }
+    &:after {
+        content: "";
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $c__secondary;
+        opacity: 0.95;
+    }
+    @supports (background-blend-mode: multiply) {
+        background-color: $c__secondary;
+        background-blend-mode: multiply;
+        &::after {
+            display: none!important;
+        }
+    }
+    .contact-pink-sidebar-line{
+        width: 7px;
+        height: 317px;
+        background-color: $c__pink;
+        position: absolute;
+        left: -34px;
+        top: -20px;
+    }
+    span.wpcf7-list-item{
+        margin: 0;
+    }
+    .war-display--2{
+        margin-bottom: 1.25rem
+    }
+    .form-full-width{
+        width: 100%;
+    }
+    .form-half-width{
+        width: 50%;
+        width: calc(50% - 5px);
+    }
+    .last-name{
+
+        input{
+            width: calc(50% - 10px);
+            margin-left: 10px;
+        }
+    }
+    input,select,textarea{
+        font-size: 0.875rem;
+        border: 0;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        &.wpcf7-not-valid{
+            border: 1px solid $c__pink;
+        }
+    }
+    textarea{
+        height: 6rem;
+        resize: none;
+        &::placeholder{
+            color: $c__dark-blue;
+        }
+    }
+    .wpcf7-not-valid-tip,.wpcf7-validation-errors{
+        display: none!important;
+    }
+    .wpcf7-mail-sent-ng{
+        border-color: $c__pink;
+        color: $c__white;
+    }
+    .wpcf7-response-output{
+        border:0;
+        font-size: 0.875rem;
+        color: #fff;
+        padding: 0;
+    }
+    .transparent-input{
+        border-bottom: 1px solid $c__pink;
+        background-color: transparent;
+        &,&::placeholder{
+            color: $c__white;
+        }
+    }
+    .wpcf7-acceptance{
+        font-size: 0.625rem;
+        color: $c__white;
+        .consent-checkbox{
+            position: relative;
+            float: left;
+            border: 0;
+            border-radius: 2px;
+            background-color: $c__white;
+            &:checked:after {
+                content: " ";
+                background-color: #EF426F;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+            }
+            &:focus, 
+            &:checked{
+                background-color: white;
+                border: none;
+            }
+        }
+        .wpcf7-list-item-label{
+            float: left;
+            margin-top: -2px;
+            margin-left: 10px;
+        }
+    }
+
+    .wpcf7-submit{
+        float: right;
+        padding: 16px 33px;
+        font-size: 1.125rem;
+    }
+    .contact-details-wrapper{
+        p{
+            margin-bottom: 0.58rem;
+            a{
+                color: $c__white;
+                font-size: 1.3125rem;
+            }
+        }
+        .contact-email-wrapper{
+            margin-bottom: 2rem;
+            a{
+                color: $c__pink;
+            }
+        }
+        i{
+            color: $c__pink;
+            margin-right: 5px;
+        }
+        .war-social-links-contact{
+            li{
+                display: inline-block;
+                margin-right: 15px;
+                a{
+                    background-color: $c__pink;
+                    &:hover{
+                        background-color: $c__grey;
+                    }
+                }
+            }
+        }
+    }
+    .acf-map {
+        width: 100%;
+        height: 251px;
+        border: #ccc solid 1px;
+        margin: 20px 0;
+    }
+    /* fixes potential theme css conflict */
+    .acf-map img {
+    max-width: inherit !important;
+    }
+}

@@ -1,0 +1,84 @@
+// Colors
+
+/*!
+
+Color scheme (example):
+white: #ffffff;
+black: #000000;
+red: #e71b1b;
+orange: #d48113;
+
+*/
+
+// Monochrome:
+
+$c__white: #ffffff;
+
+$c__grey--0: #e9e9e9;
+$c__grey--1: #c0c0c0;
+$c__grey--2: #999999;
+$c__grey--3: #dbdbdb;
+
+$c__black--0: #000000;
+$c__black--1: #333333;
+
+// Main colors:
+
+$c__pink: blue;
+$c__primary: $c__pink;
+
+$c__dark-blue: #202b34;
+$c__secondary: $c__dark-blue;
+
+$c__grey: #878a8c;
+$c__info: $c__grey;
+$c__disabled: $c__grey;
+
+// Colors assinged:
+
+// Text
+$c__main-text: $c__dark-blue;
+$c__secondary-text: $c__grey;
+$c__heading: $c__dark-blue;
+
+// Backgrounds
+$c__bg--primary: $c__pink;
+$c__bg--dark: $c__dark-blue;
+$c__bg--light: $c__grey;
+$c__bg--white: $c__white;
+
+$c__bg--body: $c__white;
+$c__bg--hr: $c__grey--2;
+
+// Links
+$c__link: $c__primary;
+$c__link--visited: $c__primary;
+$c__link--hover: $c__secondary;
+
+// Inputs
+$c__input-text: $c__grey--0;
+$c__input-text--focus: $c__black--0;
+$c__input-border: $c__grey--1;
+$c__input-border--focus: $c__grey--1;
+
+// Buttons
+$c__button-text: $c__white;
+$c__button-text--hover: $c__white;
+$c__button-text--disabled: $c__white;
+
+$c__button-bg: $c__primary;
+$c__button-bg--hover: $c__grey;
+$c__button-bg--disabled: $c__disabled;
+
+$c__icon-button-text: $c__white;
+$c__icon-button-bg: $c__primary;
+$c__icon-button-bg--hover: $c__secondary;
+
+$c__alt-icon-button-text: $c__white;
+$c__alt-icon-button-bg: $c__grey;
+$c__alt-icon-button-bg--hover: $c__primary;
+
+$c__fund-button-bg: $c__secondary;
+$c__fund-button-bg--active: $c__primary;
+$c__fund-button-bg--hover: $c__primary;
+$c__fund-button-bg--disabled: $c__grey--3;

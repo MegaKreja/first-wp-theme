@@ -1,0 +1,79 @@
+/*! Action card */
+
+.action-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 312px;
+    padding: 0 0 11px;
+    margin-bottom: 1.5rem; // 24 px
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: color $v__transition-time $v__transition-easing;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: $c__primary;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: background-color $v__transition-time $v__transition-easing,
+                    width $v__transition-time $v__transition-easing;
+    }
+}
+
+.action-card_title {
+    @extend .war-display--6;
+    margin-bottom: 0;
+}
+
+.action-card_subtitle {
+    margin-bottom: 0;
+}
+
+.action-card--team {
+    .action-card_title,
+    .action-card_subtitle {
+        color: $c__white;
+    }
+
+    &.active,
+    &:hover,
+    &:focus {
+        &::after {
+            background-color: $c__grey;
+        }
+    }
+}
+
+.action-card--insight {
+    &:focus{
+        outline: 0;
+    }
+    .action-card_title {
+        color: $c__primary;
+    }
+
+    .action-card_subtitle {
+        color: $c__white;
+    }
+
+    &::after{
+        transition: background-color $v__transition-time $v__transition-easing,
+                    width $v__transition-time--superslow $v__transition-easing;
+    }
+
+    &.active{
+        &::after {
+            width: 200%;
+        }
+    }
+}

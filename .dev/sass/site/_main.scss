@@ -1,0 +1,28 @@
+/*! Main  */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+    background: $c__bg--body;
+}
+
+.content-area {
+	padding-bottom: 50px;
+}
+
+.page-template-page-simple .site-content {
+	margin-top: $s__site-header-height--mobile;
+	padding-top: 50px;
+
+	@include media-breakpoint-up(lg) {
+		padding-top: 100px;
+	}
+}

@@ -1,0 +1,260 @@
+/*! Home  */
+
+/* About us section */
+
+.about-us{
+    padding-top: 84px;
+    padding-bottom: 84px;
+    &-content{
+        .about-us-text{
+            max-width: 100%;
+            padding: 0;
+
+            @include media-breakpoint-up(md) {
+                padding: 0 17%;
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: map-get($container-max-widths, 'lg') / 2 ;
+                float: right;
+                padding: 0px 9.3% 0px 15px;
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: map-get($container-max-widths, 'xl') / 2 ;
+            }
+            @include media-breakpoint-up(xxl) {
+                max-width: map-get($container-max-widths, 'xxl') / 2 ;
+            }
+            @include media-breakpoint-up(xxxl) {
+                max-width: map-get($container-max-widths, 'xxxl') / 2 ;
+            }
+        }
+        .about-us-strength{
+            margin: -10% auto 0 auto;
+            text-align: center;
+            .war-highlighted-num{
+                font-size: 52.5vw;
+                
+            }
+            .about-us-strength-text{
+                text-align:center;
+                @extend .war-highlighted-num_label;
+                font-size: 4vw;
+            }
+            @include media-breakpoint-up(lg) {
+                margin: 44% 0 0 -9%;
+                .about-us-strength-text{
+                    font-size: 1.78vw;
+                }
+            }
+            @include media-breakpoint-up(xl) {
+                .war-highlighted-num{
+                    line-height: 0.775;
+                }
+                margin: 34% 0 0 -9%;
+            }
+            @include media-breakpoint-up(xxl) {
+                margin: 14% 0 0 -9%;
+            }
+        }
+        .about-us-slider{
+            width: 100%;
+            clear: both;
+            .slick-list{
+                width: 100%;
+                height: 100%;
+                .slide{
+                    min-height: 200px;
+                    position: relative;
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                .slick-list{
+                    .slide{
+                        min-height:400px;
+                    }
+                }
+            }
+            @include media-breakpoint-up(lg) {
+                padding-top: 25.6%;
+                .slick-list{
+                    width: 100%;
+                    height: 100%;
+                    .slide{
+                        padding-top: 100%;
+                        position: relative;
+                    }
+                }
+            }
+        }
+        .about-us-team{
+            display: flex;
+            flex-direction: column;
+            padding-top: 237px;
+            padding: 0;
+            max-width: 100%;
+            float: none;
+            position: relative;
+            
+            @include media-breakpoint-up(md) {
+                padding: 0 6.5%;
+            }
+
+            @include media-breakpoint-up(lg) {
+                max-width: map-get($container-max-widths, 'lg') / 2 ;
+                float: left;
+                position: absolute;
+                bottom: 0;
+                padding-right: 15px;
+
+                .about-us-team-title{
+                    font-size: 4.125rem;
+                }
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: map-get($container-max-widths, 'xl') / 2 ;
+            }
+            @include media-breakpoint-up(xxl) {
+                max-width: map-get($container-max-widths, 'xxl') / 2 ;
+            }
+            @include media-breakpoint-up(xxxl) {
+                max-width: map-get($container-max-widths, 'xxxl') / 2 ;
+            }
+
+            .about-us-team-title{
+                @extend .war-display--1;
+                text-transform: uppercase;
+                
+                @include media-breakpoint-up(sm) {
+                    font-size: 3.1rem;
+                }
+                @include media-breakpoint-up(xxl) {
+                    font-size: 4.125rem;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: 10.4%;
+    }
+}
+
+
+/*  Awards section */
+
+.awards{
+    text-align: center;
+    position: relative;
+    padding-top: 5rem; // 80px
+    padding-bottom: 3.5rem; // 56px
+
+    @include media-breakpoint-up(md) {
+        padding-top: 7.25rem; // 116px
+        padding-bottom: 5.625rem; // 90px
+    }
+
+    .section-title{
+        @extend .war-display--1;
+        text-align: center;
+        width: 100%;
+    }
+    .awards-slider{
+        width: 100%;
+        .awards-row{
+            .award{
+                width: 100%;
+            }
+        }
+    }
+    .awards_slider-controls{
+        width: 100%;
+        max-width: 312px;
+        text-align: center;
+        padding: 20px 0;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        .awards_slider-next,
+        .awards_slider-prev {
+            @extend .war-icon-button--plain;
+            margin: 0 17px;
+        }
+    }
+    .awards-row{
+        justify-content: flex-start;
+        display: flex!important;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.5s;
+        &.inactive{
+            opacity: 0;
+        }
+        .award{
+            text-align: center;
+            vertical-align: top;
+            padding: 0 11% 16.5% 11%;
+            width: 100%;
+            h3 {
+                font-size: 1.2rem;
+                text-transform: capitalize;
+                margin-bottom: 0;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 1.3rem;
+                }
+            }
+            h4 {
+                color: $c__primary;
+                text-transform: capitalize;
+                font-size: 1.15rem;
+                margin-bottom: 0;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 1.25rem;
+                }
+            }
+            &-description{
+                p{
+                    margin-bottom: 0;
+                    font-size: 1rem;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            &-disclaimer{
+                p{
+                    margin-bottom: 0;
+                    font-size: 0.7em;
+                }
+                
+            }
+            @include media-breakpoint-up(lg) {
+                width: 50%;
+                padding-bottom: 5.5%;
+            }
+        }
+    }
+    .awards-disclaimer{
+        display: flex;
+        width: 100%;
+        padding: 0 11% 0% 11%;
+        justify-content: flex-start;
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+
+#touch-focus{
+    color: red;
+    &:focus{
+        color: #fff;
+    }
+}

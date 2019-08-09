@@ -1,0 +1,393 @@
+/*! Team section */
+
+.team {
+    background: url("/wp-content/themes/waratah/assets/images/team-section-bg.jpg") no-repeat top center / cover transparent;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $c__secondary;
+        opacity: 0.95;
+    }
+
+    // if the browser supports 'background-blend-mode' we will use that instead
+    // and hide the original overlay pseudo element '::before'
+    @supports (background-blend-mode: multiply) {
+        position: static;
+        background-color: $c__secondary;
+        background-blend-mode: multiply;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.team_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.team-slider-holder {
+    padding-top: 15px;
+}
+
+.team-showcase_wrap {
+    flex: 1 1 100%;
+    max-width: 78%;
+    
+    .team-showcase--inactive & {
+        display: none;
+    }
+    
+    .team-showcase-close {
+        display: none;
+        position: absolute;
+        width: 3rem;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        i {
+            color: $c__primary;
+            font-size: 3rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 2rem;
+            left: auto;
+            right: 10px;
+            transform: translateX(0%);
+
+            i {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        display: flex;
+        position: fixed;
+        z-index: 100;
+        width: 100vw;
+        max-width: 100%;
+        left: 0;
+        top:0;
+        bottom: 0;
+        background: $c__secondary;
+        transition: all 0.5s;
+
+        .team-showcase-close {
+            display: block;
+        }
+    }
+}
+
+.team-showcase {
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
+}
+
+.team-showcase_portrait {
+    flex: 1 1 100%;
+    max-width: 60%;
+    position: relative;
+
+    @include media-breakpoint-up(xxxl) {
+        max-width: 66.6667%;
+    }
+
+    @include media-breakpoint-down(md) {
+        background-color: #e3e3e3;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.team-showcase_portrait-image {
+    width: 100%;
+    padding-top: 88.3%;
+    height: 100%;
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-down(xxl) {
+        background-position: top right 30%;
+    }
+
+    @include media-breakpoint-down(xl) {
+        padding-top: 80%;
+        height: 100%;
+        background-position: center;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-top: 42%;
+        background-position: center top;
+        width: 60%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-position: top right 40%;
+        width: 80%;
+    }
+}
+
+.team-showcase_name {
+    @extend .war-decor-title--dark;
+    position: absolute;
+    top: 9.6%;
+    right: 0;
+    padding-right: 20px;
+    z-index: 1;
+
+    @include media-breakpoint-down(xl) {
+        top: 17.4%;
+        padding: 5px 15px 5px 0;
+    }
+
+    @include media-breakpoint-down(md) {
+        top: 50%;
+        right: auto;
+        left: 60%;
+        transform: translateY(-50%);
+        padding: 0 15px 0 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+        right: 0;
+        left: auto;
+    }
+
+    &::before {
+        @include media-breakpoint-down(xl) {
+            width: 4px;
+            left: -18px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            left: -5px;
+        }
+    }
+
+    h2 {
+        font-size: 2.5rem;
+
+        @include media-breakpoint-down(xl) {
+            @include font-size(1.75); // 28px
+        }
+
+        @include media-breakpoint-down(md) {
+            @include font-size(1.4375); // 23px
+        }
+    }
+
+    h6 {
+        max-width: 222px;
+
+        @include media-breakpoint-down(xl) {
+            @include font-size(0.625); // 10px
+            max-width: 110px;
+        }
+
+        @include media-breakpoint-down(md) {
+            @include font-size(0.6875); // 11px ?
+            max-width: 120px;
+        }
+    }
+}
+
+.team-showcase_bio {
+    flex: 1 1 100%;
+    max-width: 33.3332%;
+    padding: 0 26px 15px 48px;
+    margin: 20px 0 35px;
+    color: $c__white;
+    border-right: 1px solid;
+    overflow-y: auto;
+
+    @include media-breakpoint-up(xxl) {
+        height: 810px;
+        overflow: auto;
+    }
+
+    @include media-breakpoint-down(xxl) {
+        max-width: 40%;
+    }
+
+    @include media-breakpoint-down(xl) {
+        margin: 0;
+        padding: 70px 60px 50px;
+        border-right: none;
+    }
+
+    @include media-breakpoint-down(md) {
+        max-width: 100%;
+        padding: 25px 15px;
+    }
+
+    h4 {
+        @include media-breakpoint-down(xl) {
+            @include font-size(1.375); // 22px
+        }
+
+        @include media-breakpoint-down(md) {
+            @include font-size(0.9375); // 15px
+        }
+    }
+
+    p {
+        color: inherit;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-down(xl) {
+            @include font-size(1.125); // 18px
+        }
+
+        @include media-breakpoint-down(md) {
+            @include font-size(0.875); // 14px
+        }
+    }
+}
+
+.team-showcase_portrait,
+.team-showcase_bio {
+    @include media-breakpoint-down(xl) {
+        max-width: 50%;
+        height: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        max-width: 100%;
+    }
+}
+
+.team-list_slider-wrap {
+    @include media-breakpoint-down(xl) {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
+}
+
+.team-list_wrap {
+    flex: 1 1 100%;
+    flex-direction: column;
+    padding: 30px 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include media-breakpoint-up(lg) {
+        padding: 40px 0px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        height: 865px;
+    }
+}
+
+.team-list {
+    @include media-breakpoint-up(md) {
+        padding: 0 15px;
+    }
+
+    .action-card {
+        &:focus{
+            outline: 0;
+        }
+        @include media-breakpoint-down(sm) {
+            max-width: none;
+            width: 100%;
+        }
+    }
+}
+
+.team-list_slider-controls {
+    width: 100%;
+    max-width: 312px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.team-list_slider-next,
+.team-list_slider-prev {
+    @extend .war-icon-button--plain;
+    margin: 0 17px;
+
+    &.slick-disabled {
+        color: $c__grey;
+    }
+}
+
+.team-slider--inactive {
+    .team-list_wrap {
+        align-items: flex-end;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding-left: 15px;
+            padding-right: calc((100% - #{map-get($container-max-widths, 'xxl')}) / 2);
+        }
+
+        @include media-breakpoint-up(xxxl) {
+            padding-right: calc((100% - #{map-get($container-max-widths, 'xxxl')}) / 2);
+        }
+    }
+
+    .team-list {
+        @include media-breakpoint-up(xxl) {
+            margin-left: 60px;
+        }
+    }
+
+    .team-list_slider-wrap {
+        display: flex;
+    }
+
+    .team-list_slider-controls {
+        display: none;
+    }
+}
+
+.team-slider--active {
+    .team-list_wrap {
+        @include media-breakpoint-up(xxl) {
+            max-width: 22%;
+            padding-left: 15px;
+        }
+    }
+
+    .team-list_slider-wrap {
+        width: 100%;
+    }
+}

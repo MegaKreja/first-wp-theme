@@ -1,0 +1,30 @@
+/*! Widgets */
+
+.widget--footer {
+    .widget-title {
+        @extend .war-display--5;
+
+        a {
+            @extend .war-display--5;
+            
+            &:hover,
+            &:focus {
+                color: $c__grey;
+            }
+        }
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    a {
+        @extend .war-menu-link--2;
+        font-size: 1.15rem;
+        p{
+            font-size: inherit;
+        }
+    }
+}

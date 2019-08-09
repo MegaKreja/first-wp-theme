@@ -1,0 +1,263 @@
+/*! Hero slider  */
+
+.hero-slider {
+    z-index: 1; // fixes issue when text from sections bellow the Hero overlap the slider controls
+}
+
+.hero-slider,
+.hero-image{
+    padding: 0;
+    .slide{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+        .container{
+            height: 100%;
+        }
+        &-content{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index:3;
+            padding-top: $s__site-header-height--mobile;
+            padding-left: 45px;
+            padding-right: 15px;
+
+            .slide-title{
+                @extend .war-display--2;
+                font-size: 1.5rem;
+                z-index:3;
+                position: relative;
+                padding: 10px 0;
+                margin: 0;
+                opacity: 0;
+                transition: opacity 2.5s $v__transition-cubic 1s;
+
+                @include media-breakpoint-up(sm) {
+                    padding: 15px 0;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    padding: 30px 0;
+                }
+
+                p{
+                    @extend .war-display--2;
+                    font-size: inherit;
+                    z-index:inherit;
+                    margin: 0;
+                }
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 7px;
+                    left: -20px;
+                    top: 0;
+                    bottom: 0;
+                    background: $c__pink;
+
+                    @include media-breakpoint-up(md) {
+                        left: -45px;
+                    }
+                }
+            }
+            .slide-subtitle{
+                @extend .war-display--3;
+                font-size: 1.25rem;
+                z-index:3;
+                padding: 66px 0 0 0;
+                opacity: 0;
+                transition: opacity 2.5s $v__transition-cubic 1.5s;
+                p{
+                    @extend .war-display--3;
+                    font-size: inherit;
+                    margin: 0;
+                    z-index:3;   
+                }
+            }
+            .slide-text{
+                @extend .war-display--5;
+                color: $c__white;
+                font-size: 1.25rem;
+                z-index:3;
+                padding: 66px 0 0 0;
+                opacity: 0;
+                transition: opacity 2.5s $v__transition-cubic 1.5s;
+                p{
+                    @extend .war-display--5;
+                    font-size: inherit;
+                    margin: 0;
+                    z-index:3;   
+                }
+            }
+            a{
+                z-index: 3;
+                display: inline;
+                max-width: 272px;
+                &:focus{
+                    outline: 0;
+                }
+            }
+            .slide-button {
+                @extend .war-button;
+                background-color: transparent;
+                color: $c__pink;
+                z-index: 3;
+                position: relative;
+                width: 272px;
+                opacity: 0;
+                transform: translate( -30px, 0 );
+                transition: opacity 2.3s $v__transition-cubic 2.5s, transform 1.5s $v__transition-cubic 2.5s;
+                padding-left: 0;
+                text-align: left;
+                &:hover,
+                &:focus{
+                    outline: 0;
+                    background-color: transparent;
+                }
+            }
+            .strategies-private,
+            .strategies-mutual{
+                @extend .war-button;
+                z-index: 3;
+                position: relative;
+            }
+        }
+        &:after{
+            content: "";
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(32, 43, 52, 0.62 );
+        }
+
+        @include media-breakpoint-up(md) {
+            .slide-content{
+                .slide-title{
+                    font-size: 2rem;
+                    p{
+                        font-size: inherit;
+                    }
+                }
+                .slide-subtitle{
+                    font-size: 1.55rem;
+                    p{
+                        font-size: inherit;
+                    }
+                }
+                .slide-text{
+                    font-size: 1.55rem;
+                    p{
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+        
+        @include media-breakpoint-up(lg) {
+            .slide-content{
+                padding-top: $s__site-header-height;
+                .slide-title{
+                    font-size: 3rem;
+                    p{
+                        font-size: inherit;
+                    }
+                }
+                .slide-subtitle{
+                    font-size: 2.05rem;
+                    p{
+                        font-size: inherit;
+                    }
+                }
+                .slide-text{
+                    font-size: 2.05rem;
+                    p{
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+    }
+    .slick-current{
+        .slide{
+            .slide-content{
+                .slide-title{
+                    opacity: 1;
+                }
+                .slide-subtitle{
+                    opacity: 1;
+                }
+                .slide-text{
+                    opacity: 1;
+                }
+                .slide-button {
+                    opacity: 1;
+                    transform: translate(0, 0px);
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        bottom: 25px;
+
+        li {
+            margin: 0 8px;
+
+            button::before {
+                background-color: transparent;
+                color: transparent;
+                border: 1px solid $c__white;
+            }
+
+            button:hover,
+            button:focus {
+                &::before {
+                    background-color: $c__white !important;
+                    color: $c__white !important;
+                    border: 1px solid $c__white !important;
+                }
+            }
+            
+            &.slick-active button::before {
+                background-color:  $c__primary !important;
+                color: $c__primary !important;
+                border: 1px solid $c__primary !important;
+            }
+        }
+    }
+
+    &--dark-blue{
+        .slide{
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $c__secondary;
+                opacity: 0.95;
+            }
+        
+            // if the browser supports 'background-blend-mode' we will use that instead
+            // and hide the original overlay pseudo element '::before'
+            @supports (background-blend-mode: multiply) {
+                position: relative;
+                background-color: $c__secondary;
+                background-blend-mode: multiply;
+                &::after {
+                    display: none!important;
+                }
+            }
+        }
+    }
+}

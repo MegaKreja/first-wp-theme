@@ -1,0 +1,25 @@
+/*! Links  */
+
+a {
+    color: $c__primary;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+        color: $c__grey;
+    }
+}
+
+a,
+span,
+button,
+input,
+textarea,
+select {
+  outline-color: $c__primary;
+}
+
+a.manager-lb {
+    cursor: pointer;
+    transition: color $v__transition-time $v__transition-easing;
+}

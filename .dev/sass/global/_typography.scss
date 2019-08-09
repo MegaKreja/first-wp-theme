@@ -1,0 +1,395 @@
+/*! Typography */
+
+* {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-kerning: auto;
+}
+
+
+/* Main text styles */
+
+body {
+	color: $c__main-text;
+}
+
+body,
+p,
+.war-text {
+	font-family: $t__font-main;
+	@include font-size(1); // 16px
+	line-height: 1.6; // 32px
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(1.125); // 18px
+	}
+
+	@include media-breakpoint-up(xl) {
+		@include font-size(1.25); // 20px
+	}
+}
+
+p,
+.war-text {
+	margin-top: 0;
+	margin-bottom: 1.563rem; // 25px, temp default value, relative to default browser font size of 16px
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	clear: both;
+	margin-top: 0;
+	margin-bottom: 2rem; // 32px, temp default value, relative to default browser font size of 16px
+}
+
+h1,
+.h1 {
+	font-family: $t__font-sec;
+	@include font-size(2.125); // 34px
+	line-height: 1.212; // 80px
+	font-weight: 400;
+	letter-spacing: letter-spacing(14);
+	margin-bottom: 0.728em;
+
+	sup {
+		@include font-size(1); // 16px
+		line-height: 1;
+		vertical-align: top;
+		top: 0;
+	}
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(3.125); // 50px
+	}
+
+	@include media-breakpoint-up(xl) {
+		@include font-size(4.125); // 66px
+	}
+}
+
+h2,
+.h2 {
+	font-family: $t__font-sec;
+	@include font-size(1.875); // 30px 
+	line-height: 1.167; // ~56px
+	font-weight: 400;
+	letter-spacing: letter-spacing(14);
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(2.375); // 38px
+	}
+
+	@include media-breakpoint-up(xl) {
+		@include font-size(3); // 48px
+	}
+}
+
+h3,
+.h3 {
+	font-family: $t__font-main;
+	@include font-size(1.625); // 26px
+	line-height: 1.195; //  43px
+	font-weight: 400;
+	letter-spacing: letter-spacing(94);
+	text-transform: uppercase;
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(1.875); // 30px
+	}
+
+	@include media-breakpoint-up(xl) {
+		@include font-size(2.25); // 36px
+	}
+}
+
+h4,
+.h4 {
+	font-family: $t__font-main;
+	@include font-size(1.25); // 22px
+	line-height: 1.414; // 41px
+	font-weight: bold;
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(1.5); // 26px
+	}
+
+	@include media-breakpoint-up(xl) {
+		@include font-size(1.8125); // 29px
+	}
+}
+
+h5,
+.h5 { // styling same as regular text
+	font-family: $t__font-main;
+	@include font-size(1); // 16px
+	line-height: 1.6; // 32px
+	font-weight: 400;
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(1.125); // 18px
+	}
+
+	@include media-breakpoint-up(xl) {
+		@include font-size(1.25); // 20px
+	}
+}
+
+h6,
+.h6 {
+	font-family: $t__font-main;
+	@include font-size(0.875); // 12px
+	line-height: 1.572; // 22px
+	font-weight: 400;
+}
+
+/* End of main text styles */
+
+
+/* Other text styles */
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 45px 16% 35px 80px;
+	font-family: $t__font-sec;
+	@include font-size(1.125); // 18px
+	line-height: 1.5;
+	color: $c__secondary;
+
+	p {
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+	}
+
+	p::before {
+		content: '"';
+		width: 25px;
+		margin-left: -25px;
+		display: inline-block;
+		vertical-align: middle;
+		@include font-size(2.5); // 40px
+		line-height: 2.25rem;
+	}
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(1.25); // 20px
+
+		p::before {
+			@include font-size(3.25); // 52px
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		@include font-size(1.5); // 24px
+
+		p::before {
+			@include font-size(3.75); // 60px
+		}
+	}
+}
+
+cite {
+	display: block;
+	font-family: $t__font-main;
+	@include font-size(1.125); // 18px
+	font-style: italic;
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(1.25); // 20px
+	}
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: $c__grey--0;
+	font-family: $t__font-code;
+	@include font-size(1);
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: $t__font-code;
+	@include font-size(1);
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $c__primary;
+	cursor: help;
+}
+
+mark, ins {
+	background: $c__info;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* End of other text styles */
+
+
+/* Applied text styling */
+
+.war-display--1 { // section title
+	@extend .h1;
+	color: $c__secondary;
+	text-transform: uppercase;
+}
+
+.war-display--2 { // Hero title, team member name expanded
+	@extend .h2;
+	color: $c__white;
+}
+
+.war-display--3 { // Hero subtitle
+	@extend .h3;
+	color: $c__white;
+}
+
+.war-display--4 { // Widget title
+	@extend .h4;
+	color: $c__secondary;
+}
+
+.war-display--5 { // Widget title in footer
+	font-family: $t__font-main;
+	@include font-size(1.375); // 22px
+	line-height: 1.1875; // 38px
+	font-weight: 400;
+	letter-spacing: letter-spacing(14);
+	color: $c__primary;
+	margin-bottom: 1.28em; // 25px
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(1.625); // 26px
+	}
+
+	@include media-breakpoint-up(xl) {
+		@include font-size(2); // 32px
+	}
+}
+
+.war-display--6 {
+	@extend .h5;
+	font-weight: bold;
+}
+
+
+.war-menu-link--1 { // header menu link
+    font-family: $t__font-main;
+	@include font-size(1); // 16px
+    line-height: 1.2105; // 23px
+    text-transform: uppercase;
+	letter-spacing: letter-spacing(94);
+	color: $c__white;
+	transition: background-color $v__transition-time $v__transition-easing, color $v__transition-time $v__transition-easing;
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(1.1875); // 19px
+	}
+}
+
+.war-menu-link--2 { // footer menu link
+    font-family: $t__font-main;
+	@include font-size(1.125); // 18px
+    line-height: 1.572; // 33px
+	letter-spacing: letter-spacing(14);
+	color: $c__white;
+	transition: color $v__transition-time $v__transition-easing;
+
+	&:hover,
+	&:focus {
+		color: $c__primary;
+	}
+
+	@include media-breakpoint-up(sm) {
+		@include font-size(1.3125); // 21px
+	}
+}
+
+/* End of applied text styling */
+
+
+/* Specialized text styling */
+
+.war-highlighted-num {
+	font-family: $t__font-sec;
+	@include font-size(62.9375); // 1007px
+	line-height: 0.775; // 780px
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+.war-highlighted-num_label {
+	font-family: $t__font-sec;
+	@include font-size(2.125); // 34px
+	line-height: 1.177; // 40px
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.war-decor-title {
+	position: relative;
+	padding: 18px 0 20px;
+	margin: 0;
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 7px;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		background: $c__primary;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 0;
+		padding-left: 15px;
+	}
+
+	h2 {
+		@extend .war-display--2;
+		margin: 0;
+	}
+
+	h6 {
+		color: $c__white;
+		margin-top: 0.5rem;
+	}
+
+	@include media-breakpoint-up(md) {
+		&:before {
+			left: -45px;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			padding-left: 0;
+		}
+	}
+}
+
+.war-decor-title--dark {
+	@extend .war-decor-title;
+	
+	h2 {
+		color: $c__secondary;
+	}
+
+	h6 {
+		color: $c__grey;
+	}
+}
+
+/* End of specialized text styling */

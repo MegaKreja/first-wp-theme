@@ -1,0 +1,258 @@
+/*! Insights section */
+
+section.insights {
+    background: url("/wp-content/themes/waratah/assets/images/insights-section-bg.jpg") no-repeat center center / cover transparent;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $c__secondary;
+        opacity: 0.95;
+    }
+
+    // if the browser supports 'background-blend-mode' we will use that instead
+    // and hide the original overlay pseudo element '::before'
+    @supports (background-blend-mode: multiply) {
+        position: relative;
+        background-color: $c__secondary;
+        background-blend-mode: multiply;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.insights-wrapper {
+	z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $c__white;
+    h1{
+		text-transform: uppercase;
+	}
+}
+
+.insights-text{
+	p{
+		color: inherit;
+	}
+}
+
+.insights-categories{
+    @include media-breakpoint-down(md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.insights-popup{
+    position: fixed;
+    z-index: 100;
+    min-width: 100%;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background: #fff;
+    transition: all 0.5s;
+    transform: translate( 100%, 0 );
+    &:before{
+            content: "";
+            width: 3px;
+            min-height: 0%;
+            top: 50%;
+            transition: all $v__transition-time--slow $v__transition-time--slow;
+    }
+    &.active{
+        transform: translate( 0, 0 );
+        &:before{
+            min-height: 100%;
+            background-color: $c__pink;
+            position: absolute;
+            left: -3px;
+            top: 0%;
+        }
+    }
+    .popup-close{
+        display: block;
+        margin: 0 auto 0 auto;
+        position: relative;
+        width: 3rem;
+
+        i {
+            color: $c__pink;
+            font-size:3rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 2rem;
+
+            i {
+                font-size: 2rem;
+            }
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        min-width: auto;
+        position: absolute;
+        z-index: 1;
+        .popup-close{
+            display: none;
+        }
+    }
+    
+}
+
+.insights-slide{
+    text-align:center;
+    height: 100%;
+
+    @include media-breakpoint-up(lg) {
+        justify-content: center;
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    @include media-breakpoint-down(md) {
+        overflow-y: auto;
+        display: block !important;
+    }
+
+    .insight{
+        display: flex;
+        flex-direction: column;
+        a{
+            &:hover,
+            &:focus{
+                outline: 0;
+            }
+        }
+
+        h2 {
+            color: $c__dark-blue;
+            margin: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 1.5vw;
+            }
+        }
+
+        span{
+            color: $c__pink;
+            font-size:1rem;
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        &:hover{
+            h2{
+                color: $c__pink;
+            }
+        }
+    }
+}
+
+.insights-popup{
+    .insights-popup-title{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @include media-breakpoint-up(lg){
+            display: none;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 0 15px 15px 15px;
+        }
+
+        h2{
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin: 0.2em auto;
+        }
+    }
+    .insights-posts{
+        height:100%;
+        padding-bottom: 40px;
+
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 60px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 100px;
+            height:100% !important; // override jQuery applied 'calc' height on desktop screens
+        }
+
+        .insights-type{
+            height: 100%;
+            display: none;
+            &.active{
+                display: block;
+            }
+            .slick-list{
+                height: 100%;
+                .slick-track{
+                    height:100%;
+                    .slick-slide{
+                        height: 100%;
+                        & > div{
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .insights-list_slider-controls {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate( -50%, 0 );
+
+        @include media-breakpoint-up(sm) {
+            padding: 20px 0 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 20px 0;
+        }
+    }
+    
+    .insights-list_slider-next,
+    .insights-list_slider-prev {
+        @extend .war-icon-button--plain;
+
+        @include media-breakpoint-up(xl) {
+            margin: 0 17px;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin: 0 17px;
+        }
+
+        &.slick-disabled {
+            color: $c__grey;
+        }
+    }
+    
+}

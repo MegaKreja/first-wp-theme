@@ -1,0 +1,182 @@
+/*! Footer  */
+
+$footer-main-breakpoint: xxl;
+
+.site-footer {
+    background-color: $c__secondary;
+    padding: 24px 15px;
+
+    @include media-breakpoint-up(md) {
+        padding: 44px 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 64px 60px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 94px 5%;
+    }
+
+    .site-branding {
+        padding: 0 1rem 10px;
+        text-align: center;
+    }
+
+    .site-branding,
+    .war-social-links--footer {
+        @include media-breakpoint-up($footer-main-breakpoint) {
+            max-width: 185px;
+        }
+    }
+
+    .menu-item.menu-item-has-children {
+        .sub-menu-toggle {
+            background: none;
+            width: 16px;
+            height: 16px;
+            border: none;
+            padding: 0;
+            margin-left: 6px;
+
+            &:before {
+                content: " ";
+                display: block;
+                background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9.5'%3E%3Cpolygon fill='%23ffffff' points='1.5 0 8 6.5 14.5 0 16 1.5 8 9.5 0 1.5' %3E%3C/polygon%3E%3C/svg%3E") no-repeat center;
+                background-size: 16px 9.5px;
+                transition: transform 0.2s $v__transition-cubic;
+                width: 16px;
+                height: 9.5px;
+            }
+
+            &:hover,
+            &:focus {
+                outline: none !important;
+            }
+        }
+
+        &.open {
+            .sub-menu-toggle:before {
+                transform: rotate(180deg);
+            }
+        }
+        
+        .sub-menu {
+            list-style: none;
+            padding-left: 15px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.site-footer_container {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up($footer-main-breakpoint) {
+        flex-direction: row;
+    }
+}
+
+.site-footer_left-section {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 2px solid $c__grey;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 143px;
+
+    @include media-breakpoint-up(md) {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    @include media-breakpoint-up($footer-main-breakpoint) {
+        max-width: 17.5%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 4.8%;
+        border-bottom: none;
+        border-right: 2px solid $c__grey;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.site-footer_right-section {
+    margin-top: 50px;
+    flex: 1 1 100%;
+
+    @include media-breakpoint-up($footer-main-breakpoint) {
+        margin-top: 0;
+        padding-left: 95px;
+        max-width: 82.5%;
+    }
+}
+
+// social menu in left section of the footer
+.war-social-links--footer {
+    padding: 1rem 0.5rem 0;
+    max-width: 172px;
+
+    @include media-breakpoint-up($footer-main-breakpoint) {
+        padding: 1rem 0 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    
+        @include media-breakpoint-up($footer-main-breakpoint) {
+            flex-direction: column;
+        }
+    }
+
+    .menu-item {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 50%;
+        text-align: center;
+    
+        @include media-breakpoint-up($footer-main-breakpoint) {
+            max-width: 100%;
+        }
+    
+        a {
+            margin: 0 0 1rem;
+        }
+    }
+}
+
+// Needed if we are following the design, but not sure if want to do that
+.footer-widget-area {
+    .widget--footer {
+        text-align: center;
+        .war-footer-widget-list{
+            li{
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @include media-breakpoint-up($footer-main-breakpoint) {
+            text-align: left;
+            .war-footer-widget-list{
+                li{
+                    display: flex;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.war-manager-lightbox {
+    .featherlight-content {
+        margin: 0;
+        padding: 0;
+        // only adds background styling
+        @extend .team;
+        border-bottom: none;
+
+        & > .featherlight-close-icon {
+            display: none !important;
+        }
+
+        .featherlight-close {
+            display: block;
+            position: absolute;
+            left: auto;
+            right: 10px;
+            top: 10px;
+            color: $c__primary;
+            background: transparent;
+
+            @include media-breakpoint-up(lg) {
+                left: 50%;
+                right: auto;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                left: 46.8% !important; // aim for the border between the image and the text area
+            }
+            
+            @include media-breakpoint-up(xxxl) {
+                left: 52% !important; // aim for the border between the image and the text area
+            }
+        }
+
+        .team-showcase_wrap {
+
+            &.basic-info{
+                max-width: 100%;
+
+                .team-showcase_portrait {
+                    max-width: 100%!important;
+
+                    @include media-breakpoint-up(lg) {
+                        max-width: 50%!important;
+                    }
+                }
+                .team-showcase_bio{
+                    max-width: 100%!important;
+
+                    @include media-breakpoint-up(lg) {
+                        max-width: 50%!important;
+                    }
+
+                    border-right: 0;
+                }
+
+                .featherlight-close {
+                    @include media-breakpoint-up(xxl) {
+                        left: 50% !important; // (78% / 100) * 66.6667 to target the middle line between the photo and the bio section
+                    }
+    
+                    @include media-breakpoint-up(xxxl) {
+                        left: 50% !important; // (78% / 100) * 66.6667 to target the middle line between the photo and the bio section
+                    }
+                }
+            }
+        }
+        
+
+        .team-list_wrap {
+            justify-content: flex-start;
+            padding-top: 26px;
+
+            @include media-breakpoint-up(xxl) {
+                max-width: 22%;
+                padding-left: 15px;
+            }
+        }
+
+        .team-list_additional-info {
+            color: $c__white;
+            display: none;
+
+            @include media-breakpoint-up(xxl) {
+                display: block;
+            }
+        }
+
+        .team-list_additional-info--mobile {
+            padding-bottom: 15px;
+
+            @include media-breakpoint-up(xxl) {
+                display: none;
+            }
+        }
+    }
+}

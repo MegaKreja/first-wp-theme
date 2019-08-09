@@ -1,0 +1,67 @@
+/*! Social Impact section */
+
+section.social-impact {
+    color: $c__white;
+    padding-top: 5rem; // 80px
+    padding-bottom: 3.5rem; // 56px
+
+    @include media-breakpoint-up(md) {
+        padding-top: 7.25rem; // 116px
+        padding-bottom: 5.625rem; // 90px
+    }
+
+    .war-display--1 {
+        color: $c__white;
+
+        @include media-breakpoint-up(lg) {
+            text-align: center;
+        }
+    }
+
+    .war-articles {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        h4{
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+        a{
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    }
+
+    .war-button {
+        margin-top: auto;
+
+        @include media-breakpoint-up(md) {
+            width: 270px;
+        }
+    }
+}
+
+.simpact_intro {
+    .war-decor-title {
+        color: $c__white;
+        margin-bottom: 2rem;
+
+        h4 {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+    }
+
+    h4 {
+        font-weight: 400;
+        margin-bottom: 4rem;
+    }
+
+    p {
+        margin-bottom: 4rem;
+    }
+}

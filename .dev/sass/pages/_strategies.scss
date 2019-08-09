@@ -1,0 +1,363 @@
+.hero-image{
+    &.strategies-select{
+		
+        .slide-content{
+            min-height:100vh;
+            height: auto;
+            padding-left: 15px;
+			padding-right: 15px;
+			padding-top: 85px;
+			button
+            {
+				background-color: transparent;
+				color: $c__pink;
+				&:hover,
+                &:focus{
+                    outline: 0;
+                    background-color: transparent;
+                }
+			}
+            .slide-title {
+                opacity: 1;
+				@include font-size(1.5); // 24px
+				margin-bottom: 15px;
+            }
+            .strategies-disclaimer{
+                color: $c__white;
+				font-size: 4vw;
+				position: relative;
+				z-index:3;
+			}
+			form{
+				position: relative;
+				z-index: 3;
+			}
+			.acceptance-text{
+				background: $c__white;
+				display: flex;
+				flex-direction: column;
+				max-height: 240px;
+				overflow: auto;
+				padding: 1rem;
+				h4{
+					font-size: 1.563rem;
+					margin: 0 0 1rem 0;
+				}
+			}
+            textarea{
+                width: 100%;
+                text-align: left;
+            }
+            input[type="submit"]{
+                float: right;
+            }
+
+            @include media-breakpoint-up(sm) {
+				padding-top: 150px;
+				
+                .slide-title {
+					@include font-size(2); // 32px
+					margin-bottom: 25px;
+                }
+                .strategies-disclaimer{
+                    font-size: inherit;
+                }
+			}
+
+			@include media-breakpoint-up(lg) {
+				padding-top: 260px;
+				padding-left: 45px;
+				padding-right: 30px;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				.slide-title {
+					@include font-size(2.5); // 48px
+					margin-bottom: 35px;
+                }
+			}
+		}
+    }
+}
+
+.war-fund-category {
+	cursor: pointer;
+
+	&.active {
+		h4 {
+			@extend .war-text--pink;
+		}
+	}
+}
+
+button.war-fund-button {
+	padding: 14px 5px 14px;
+	min-height: 68px;
+	@include font-size(0.875); // 14px
+	line-height: 1.143; // 16px
+	letter-spacing: 0;
+	background-color: $c__fund-button-bg;
+	outline: none;
+
+	@include media-breakpoint-up(sm) {
+		padding: 18px 10px 14px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: 21px 10px 15px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		padding: 21px 29px 15px;
+	}
+	
+	&.active {
+		background-color: $c__fund-button-bg--active !important;
+		position: relative;
+		margin-bottom: 16px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 0px;
+			height: 0px;
+			bottom: -15px;
+			left: 50%;
+			margin-left: -15px;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-top: 15px solid $c__fund-button-bg--active;
+			transition: border-top $v__transition-time $v__transition-easing;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		background-color: $c__fund-button-bg--hover !important;
+	}
+
+	&.disabled {
+		background-color: $c__fund-button-bg--disabled !important;
+
+		&:hover,
+		&:focus {
+			background-color: $c__fund-button-bg--disabled !important;
+		}
+		&:after {
+			border-top: 15px solid $c__fund-button-bg--disabled;
+		}
+	}
+}
+
+.war-funds-slider{
+	display: flex;
+	padding: 0 28px; // space for nav arrows
+
+	@include media-breakpoint-up(xxl) {
+		padding: 0 32px; // space for nav arrows
+	}
+
+	.slick-track {
+		.slick-slide > div {
+			margin: 0 5px;
+
+			@include media-breakpoint-up(xxl) {
+				margin: 0 7px;
+			}
+		}
+	}
+
+	.slick-arrow {
+		
+		width: 30px;
+		max-width: 100%;
+		height: 68px;
+		padding: 0;
+		transform: translate(0,0);
+		position: absolute;
+		top: 0;
+		z-index: 2;
+		
+		display: flex !important;
+		flex: 0 0 auto;
+		align-items: center;
+		
+		background: $c__white;
+		transition: all 0.2s;
+
+		&:before {
+			color: $c__grey;
+			font-family: inherit;
+			width: 100%;
+		}
+	}
+
+	.slick-prev {
+		left: 0;
+		text-align: left;
+	}
+
+	.slick-next {
+		right: 0;
+		text-align: right;
+	}
+
+	.slick-disabled {
+		width: 0;
+		padding-right: 0;
+		padding-left: 0;
+		pointer-events: none;
+
+		&:before {
+			color: transparent;
+		}
+	}
+
+}
+
+.war-fund-philosophy {
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.war-fund-highlights,
+.war-fund-why-use-this-fund {
+	ul {
+		text-align: left;
+		padding-left: 23px;
+	}
+
+	li {
+		margin-bottom: 1.563rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.strategies-top,
+.strategies-middle {
+	text-align: center;
+
+	@include media-breakpoint-up(xl) {
+		text-align: left;
+	}
+}
+
+.strategies-top {
+	& > .row > div[class^="col-"] {
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.strategies-bottom {
+	opacity: 1;
+	transition: opacity 0.3s;
+	&.inactive{
+		opacity: 0;
+	}
+
+	@include media-breakpoint-up(md) {
+		text-align: left;
+	}
+}
+
+.strategies-bottom_add-info-col {
+	padding-bottom: 15px;
+
+	@include media-breakpoint-up(md) {
+		padding-bottom: 0;
+	}
+
+	@include media-breakpoint-up(xl) {
+		order: 2;
+	}
+}
+
+.strategies_feed-data {
+	text-align: center;
+
+	@include media-breakpoint-up(xl) {
+		text-align: left;
+	}
+}
+
+.strategies-bottom_title-col {
+	text-align: center;
+
+	@include media-breakpoint-up(xl) {
+		text-align: left;
+	}
+}
+
+.strategies-bottom_documents-col {
+	@include media-breakpoint-up(xl) {
+		order: 3;
+	}
+}
+
+.strategies_literature-col {
+	text-align: left;
+
+	.war-doc-col:nth-child(2n) {
+		@extend .offset-xl-1;
+	}
+}
+
+.war-fund-factsheets {
+	padding-top: 15px;
+	
+	@include media-breakpoint-up(md) {
+		padding-top: 55px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding-top: 0;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		
+		@include media-breakpoint-up(md) {
+			column-count: 2;
+			column-gap: 30px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			column-count: auto;
+			column-gap: normal;
+		}
+
+		li {
+			margin-bottom: 1.563rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@include media-breakpoint-up(xl) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.strategies-spacer-bottom {
+	margin-bottom: 20px;
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 80px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		margin-bottom: 100px;
+	}
+}
