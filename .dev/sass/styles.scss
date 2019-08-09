@@ -20,3 +20,82 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   margin: 0;
   padding: 0;
 }
+
+.header {
+  background: url('images/header-photo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.header-nav-text {
+  width: 60%;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  background: none;
+}
+
+.header-nav a {
+  font-family: 'Raleway', sans-serif;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #414b61;
+}
+
+.header-nav a.active {
+  font-weight: bold;
+}
+
+.header-nav .logo {
+  width: 25%;
+}
+
+.header-nav ul li {
+  display: inline;
+  margin: 1%;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-text h1 {
+  color: white;
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 800;
+  font-size: 60px;
+}
+
+.header-text p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 14px;
+}
+
+hr {
+  margin: 3% 0 5% 0;
+  background-color: #f7981e;
+  border: 0 none;
+  color: #eee;
+  height: 3px;
+  width: 150px;
+}
+
+.header-text button {
+  background-color: #fff;
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  width: 160px;
+  height: 40px;
+  margin-top: 3%;
+}
