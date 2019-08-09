@@ -28,9 +28,12 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   min-height: 100vh;
 }
 
-.header-nav-text {
-  width: 60%;
+.content {
+  width: 65%;
   margin: 0 auto;
+}
+
+.header-nav-text {
   min-height: 100vh;
   position: relative;
 }
@@ -46,6 +49,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   white-space: nowrap;
   text-decoration: none;
   color: #414b61;
+  font-size: 15px;
 }
 
 .header-nav a.active {
@@ -80,7 +84,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   font-size: 14px;
 }
 
-hr {
+.header hr {
   margin: 3% 0 5% 0;
   background-color: #f7981e;
   border: 0 none;
@@ -98,4 +102,46 @@ hr {
   width: 160px;
   height: 40px;
   margin-top: 3%;
+}
+
+.aboutUs h1 {
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 800;
+}
+
+.aboutUs-header {
+  text-align: center;
+  margin-top: 15%;
+  color: #414b61;
+  font-size: 60px;
+}
+
+.aboutUs hr {
+  background-color: #f7981e;
+  border: 0 none;
+  color: #eee;
+  height: 3px;
+  width: 150px;
+  margin: 2% auto;
+}
+
+.aboutUs-info p {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.aboutUs-info h1 {
+  font-size: 22px;
+  color: #414b61;
+}
+
+.aboutUs-info {
+  margin-top: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutUs-info div {
+  width: 25%;
+  padding: 1%;
 }
