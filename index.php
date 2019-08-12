@@ -36,35 +36,123 @@
       </div>
       <div class="aboutUs">
         <div class="aboutUs-content content">
-          <h1 class="aboutUs-header">About us</h1>
-            <hr>
-          <div class="aboutUs-info">
+          <h1 class="content-header">About us</h1>
+          <hr class="content-hr">
+          <div class="aboutUs-info four-inline">
             <div>
-              <h1>Our Company</h1>
+              <h1 class="content-text-header">Our Company</h1>
               <br>
-              <p>Established in 2001, ZVEMIL is a family company, base in western part of Serbia, in a small but beautiful town near border with Bosnia. SInce 2002 it has been producing quality plywood seating compnents from bech veneer for the contract seating industry. Numerous schools, cinema and theater halls, hotels and restaurants across Serbia and region are equiped with seatings that include our chair components.</p>
+              <p class="content-paragraph">Established in 2001, ZVEMIL is a family company, base in western part of Serbia, in a small but beautiful town near border with Bosnia. SInce 2002 it has been producing quality plywood seating compnents from bech veneer for the contract seating industry. Numerous schools, cinema and theater halls, hotels and restaurants across Serbia and region are equiped with seatings that include our chair components.</p>
             </div>
             <div>
-              <h1>Our Mission</h1>
+              <h1 class="content-text-header">Our Mission</h1>
               <br>
-              <p>Our mission is to stay quality and reliable producer of curved plywood seatings and furniture components, continually raising our technical and technology level of production in order to meet the expectations of out clients.<br><br>"Help you to get best product you require"</p>
+              <p class="content-paragraph">Our mission is to stay quality and reliable producer of curved plywood seatings and furniture components, continually raising our technical and technology level of production in order to meet the expectations of out clients.<br><br>"Help you to get best product you require"</p>
             </div>
             <div>
-              <h1>Our Values</h1>
+              <h1 class="content-text-header">Our Values</h1>
               <br>
-              <p>Hard work, dedication, focus and a strong commitment, focus and a strong commitment to respecting deadlines, make ZVEMIL has almost a 20-year history of manufacturing quality molded plywood products, and i trusted partner in the production for our clients in seating industry.</p>
+              <p class="content-paragraph">Hard work, dedication, focus and a strong commitment, focus and a strong commitment to respecting deadlines, make ZVEMIL has almost a 20-year history of manufacturing quality molded plywood products, and i trusted partner in the production for our clients in seating industry.</p>
             </div>
             <div>
-              <h1>Our Goals</h1>
+              <h1 class="content-text-header">Our Goals</h1>
               <br>
-              <p>As an environmentally conscious company ZVEMIL strives to meet the following goals: <br>
+              <p class="content-paragraph">As an environmentally conscious company ZVEMIL strives to meet the following goals: <br>
               <br>-Minimize waste by evaluating operations and ensuring they are as efficient as possible,<br>
               -Recycling wood and metal waste,<br>
               -Minimize harmful emissions from our adhesives by using the lowest emission resins available on the market.
               </p>
             </div>
           </div>
+          <div class="aboutUs-images">
+            <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+            <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+            <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+          </div>
+        </div>
+      </div>
+      <div class="middle-grey">
+        <div class="content content-middle-grey">
+          <h1 class="content-header">Production</h1>
+          <hr class="content-hr">
+          <p class="content-paragraph">We design and build our pressing tools-in house and optimize them to the client's specific requirements.</p>
+          <p class="content-paragraph">This allows us to maintain the highest quality of the product.</p>
+          <p class="content-paragraph">We also offer our clients several dozens of molds to chose from stock that can help the save time and money</p>
+        </div>
+      </div>
+      <div class="production-info content">
+        <div class="production-info-images">
+          <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+          <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+          <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+        </div>
+        <div class="production-info-text">
+          <h1 class="content-text-header">CNC Woodworking</h1>
+          <p class="content-paragraph">Once the molded plywood panels are pressed we machine them on Bacci 5-axis CNC machining-centre. This sophisticated computer controlled router allow us to produce variety of consistenly uniform and concise upholstery and expsosed grade components</p>
+        </div>
 
+        <div class="production-info-images">
+          <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+          <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+          <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+        </div>
+        <div class="production-info-text">
+          <h1 class="content-text-header">Design Services</h1>
+          <p class="content-paragraph">Apart from the already available products and designs, we can develop and supply any product with design and specification that the customer is looking for (but with a minimum order guaranteed).
+          </p>
+          <p class="content-paragraph">We can offer technology and knowledge to help the client design and manufacture prototype. Once the client is satisfied with the prototype, we use a Microscribe arm to create a precise 3D digital model and finally transfer the design to our CNC machine.</p>
+        </div>
+
+        <div class="production-info-images">
+          <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+          <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+          <img class="images-three" src="images/placeholder.gif" alt="placeholder">
+        </div>
+        <div class="production-info-text production-info-bottom">
+          <h1 class="content-text-header">Production capacity & Quality</h1>
+          <p class="content-paragraph">&middot; Our production capacity is about 60.000 pieces/year, which includes 50s of models of bent plywood seatings, backrests, armrest and etc.</p>
+          <p class="content-paragraph">&middot; Plywood thickness range is 4.5-40mm in form, quality and finishing scale requested by the client.</p>
+        </div>
+      </div>
+      <div class="middle-grey">
+        <div class="content content-middle-grey">
+          <h1 class="content-header">Products</h1>
+          <hr class="content-hr">
+          <p class="content-paragraph">Our products seat shells, backrests, armrests, differnet kind of seats and left for chairs and other furniture components.</p>
+        </div>
+      </div>
+      <div class="products-info content">
+        <div class="products-info-images">
+          <img src="images/stolica.jpg" alt="stolica">
+          <img src="images/stolica.jpg" alt="stolica">
+          <img src="images/stolica.jpg" alt="stolica">
+          <img src="images/stolica.jpg" alt="stolica">
+        </div>
+        <div class="products-info-text four-inline">
+          <div>
+            <h1 class="content-text-header">Nasloni za stolice</h1>
+            <p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet illo excepturi sit nihil, facere molestiae explicabo quis optio in! Tempore architecto hic quas soluta, id saepe odio nemo iusto voluptate.</p>
+          </div>
+          <div>
+            <h1 class="content-text-header">Školjke stolica</h1>
+            
+            <p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet illo excepturi sit nihil, facere molestiae explicabo quis optio in! Tempore architecto hic quas soluta, id saepe odio nemo iusto voluptate.</p>
+          </div>
+          <div>
+            <h1 class="content-text-header">Rukonasloni za stolice</h1>
+            
+            <p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet illo excepturi sit nihil, facere molestiae explicabo quis optio in! Tempore architecto hic quas soluta, id saepe odio nemo iusto voluptate.</p>
+          </div>
+          <div>
+            <h1 class="content-text-header">Sedišta za stolice</h1>
+            
+            <p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet illo excepturi sit nihil, facere molestiae explicabo quis optio in! Tempore architecto hic quas soluta, id saepe odio nemo iusto voluptate.
+            </p>
+          </div>
+        </div>
+        <div class="moto">
+          <h1 class="content-text-header">Moto</h1>
+          <p class="content-paragraph">"With our hard work and knowledge we can firmly support the design of your chairs"</p>
         </div>
       </div>
     </div>
