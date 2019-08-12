@@ -217,3 +217,27 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   text-align: center;
   margin: 10% 0 10% 0;
 }
+
+.contact-info {
+  display: flex;
+}
+
+.contact-info-text {
+  padding: 8% 0 0 15%;
+  flex: 10% 0 65%;
+}
+
+.contact-info-text h1,
+.contact-info-text p {
+  text-align: left;
+  padding: 2% 0 2% 0;
+}
+
+.contact-info hr {
+  margin-left: 0;
+  margin-bottom: 3%;
+}
+
+.contact-info-image {
+  flex: 1;
+}

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/ab3130ba7b.js"></script>
 
     <title>Wordpress theme with chairs</title>
   </head>
@@ -153,6 +153,20 @@
         <div class="moto">
           <h1 class="content-text-header">Moto</h1>
           <p class="content-paragraph">"With our hard work and knowledge we can firmly support the design of your chairs"</p>
+        </div>
+      </div>
+      <div class="contact-info middle-grey">
+        <div class="content contact-info-text">
+          <h1 class="content-header">Zvemil d.o.o</h1>
+          <hr class="content-hr">
+          <p class="content-paragraph"><i class="fas fa-phone-alt"></i>  031 861551</p>
+          <p class="content-paragraph"><i class="fas fa-mobile-alt"></i>  064 8267313</p>
+          <p class="content-paragraph"><i class="fas fa-map-marker-alt"></i>  Dragoljuba Bešlića, Bajina Bašta 31250, Srbija</p>
+          <p class="content-paragraph"><i class="fas fa-clock"></i>  Pon - Pet: <strong>06:00 - 14:00</strong></p>
+          <p class="content-paragraph">Sub - Ned: <strong>Ne radi</strong></p>
+        </div>
+        <div class="contact-info-image">
+          <img src="images/mapa.PNG" alt="mapa">            
         </div>
       </div>
     </div>
