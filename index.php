@@ -169,6 +169,18 @@
           <img src="images/mapa.PNG" alt="mapa">            
         </div>
       </div>
+      <div class="footer content">
+        <div class="footer-nav">
+          <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><img class="logo" src="images/logo.png" alt="logo"></li>
+            <li>&copy; 2019 Helendo. All rights reserved.</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <script id="__bs_script__">
       //<![CDATA[
