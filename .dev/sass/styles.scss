@@ -84,6 +84,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   font-family: 'Montserrat', sans-serif;
   color: white;
   font-size: 14px;
+  margin-top: 3%;
 }
 
 .header hr {
@@ -115,6 +116,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .content-text-header {
+  padding-top: 10%;
   text-align: center;
   color: #414b61;
   font-size: 22px;
@@ -129,6 +131,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   height: 3px;
   width: 150px;
   margin: 2% auto;
+  margin-bottom: 5%;
 }
 
 .content-paragraph {
@@ -142,6 +145,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 .aboutUs-info {
   margin-top: 10%;
+}
+
+.products-info {
+  padding: 8% 0 10% 0;
 }
 
 .aboutUs-info h1,
@@ -165,7 +172,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .images-three {
-  width: 30%;
   padding: 1.5%;
   display: inline-block;
 }
@@ -202,7 +208,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 
 .products-info-images img {
-  width: 22%;
   padding: 1%;
   display: inline-block;
 }
@@ -220,28 +225,19 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   margin: 10% 0 10% 0;
 }
 
-.contact-info {
-  display: flex;
+.contact-info-text h1 {
+  padding-top: 10%;
+  text-align: left;
 }
 
-.contact-info-text {
-  padding: 8% 0 0 15%;
-  flex: 10% 0 65%;
-}
-
-.contact-info-text h1,
 .contact-info-text p {
   text-align: left;
-  padding: 2% 0 2% 0;
+  padding: 1% 0 1% 0;
 }
 
 .contact-info hr {
   margin-left: 0;
   margin-bottom: 3%;
-}
-
-.contact-info-image {
-  flex: 1;
 }
 
 .footer-nav {
@@ -277,62 +273,78 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   margin: 1%;
 }
 
-@media (min-width: 1281px) {
+.navbar-brand img {
+  width: 150px;
 }
 
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .content {
-    width: 100%;
-  }
+.nav-item {
+  font-family: 'Raleway', sans-serif;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #414b61;
+  font-size: 15px;
 }
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .content {
-    width: 100%;
-  }
+.phone-margin {
+  margin-top: 3%;
 }
 
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
+// @media (min-width: 1281px) {
+// }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .content {
-    width: 100%;
-  }
-}
+// /*
+//   ##Device = Laptops, Desktops
+//   ##Screen = B/w 1025px to 1280px
+// */
 
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
+// @media (min-width: 1025px) and (max-width: 1280px) {
+//   .content {
+//     width: 100%;
+//   }
+// }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .content {
-    width: 100%;
-  }
+// /*
+//   ##Device = Tablets, Ipads (portrait)
+//   ##Screen = B/w 768px to 1024px
+// */
 
-  .contact-info {
-    display: block;
-  }
+// @media (min-width: 768px) and (max-width: 1024px) {
+//   .content {
+//     width: 100%;
+//   }
+// }
 
-  .contact-info-image img {
-    // flex: 1;
-    width: 300px;
-  }
+// /*
+//   ##Device = Low Resolution Tablets, Mobiles (Landscape)
+//   ##Screen = B/w 481px to 767px
+// */
 
-  .content-header {
-    font-size: 25px;
-  }
-}
+// @media (min-width: 481px) and (max-width: 767px) {
+//   .content {
+//     width: 100%;
+//   }
+// }
+
+// /*
+//   ##Device = Most of the Smartphones Mobiles (Portrait)
+//   ##Screen = B/w 320px to 479px
+// */
+
+// @media (min-width: 320px) and (max-width: 480px) {
+//   .content {
+//     width: 100%;
+//   }
+
+//   .contact-info {
+//     display: block;
+//   }
+
+//   .contact-info-image img {
+//     // flex: 1;
+//     width: 300px;
+//   }
+
+//   .content-header {
+//     font-size: 25px;
+//   }
+// }
